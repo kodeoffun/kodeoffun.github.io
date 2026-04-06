@@ -636,6 +636,56 @@
     .ft-rule-l, .ft-rule-r { display: none; }
     .ft-right { justify-content: flex-start; flex-wrap: wrap; }
   }
+  /* ── form ── */
+  .ft-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .ft-contact input, 
+  .ft-contact textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--line);
+    padding: 0.5rem 0;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    color: var(--void);
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+
+  .ft-contact input:focus, 
+  .ft-contact textarea:focus {
+    border-bottom-color: var(--void);
+  }
+
+  .ft-contact button {
+    align-self: flex-start;
+    background: var(--void);
+    color: var(--stone);
+    border: none;
+    padding: 10px 20px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: none; /* Keeps your custom cursor active */
+    transition: opacity 0.3s ease;
+  }
+
+  .ft-contact button:hover {
+    opacity: 0.8;
+  }
+
+  .form-status {
+    font-size: 11px;
+    margin-bottom: 10px;
+    display: none;
+  }
 </style>
 </head>
 <body>
@@ -931,7 +981,11 @@
   <div class="sw-rule-r"></div>
 </div>
 
-<!-- CONTACT -->
+<!-- old contact
+  <form
+  action="https://formspree.io/f/xreorqkn"
+  method="POST"
+>
 <div class="section-wrap" id="contact">
   <div class="sw-rule-l" style="border-right-color: rgba(255,255,255,0.05)"></div>
   <div class="sw-inner">
@@ -973,9 +1027,32 @@
     </div>
   </div>
   <div class="sw-rule-r" style="border-left-color: rgba(255,255,255,0.05)"></div>
-</div>
+</div> -->
+<footer>
+  <div class="ft-rule-l"></div>
+  <div class="ft-left">
+    <span class="ft-logo">Kody Wu</span>
+  </div>
 
-<!-- FOOTER -->
+  <div class="ft-center">
+    <div id="fs-status-success" class="form-status" style="color: var(--accent);">Message received. Thank you.</div>
+    <div id="fs-status-error" class="form-status" style="color: #a54a4a;">Error sending message. Please try again.</div>
+
+    <form id="contact-form" class="ft-contact">
+      <input type="email" name="email" placeholder="EMAIL ADDRESS" required data-fs-field />
+      <textarea name="message" rows="3" placeholder="PROJECT INQUIRY OR MESSAGE" required data-fs-field></textarea>
+      <button type="submit" data-fs-submit-btn>Send Request</button>
+    </form>
+  </div>
+
+  <div class="ft-right">
+    <span class="ft-copy">© 2026 kodeoffun</span>
+    <a href="#" class="ft-link">Instagram</a>
+    <a href="#" class="ft-link">Behance</a>
+  </div>
+  <div class="ft-rule-r"></div>
+</footer>
+<!-- old footer
 <footer>
   <div class="ft-rule-l"></div>
   <div class="ft-left">
@@ -989,7 +1066,7 @@
   </div>
   <div class="ft-rule-r"></div>
 </footer>
-
+-->
 <script>
   // Crosshair cursor
   const cur = document.getElementById('cur');
@@ -1017,5 +1094,31 @@
     links.forEach(a => { a.style.color = a.getAttribute('href') === '#' + cur2 ? 'var(--accent)' : ''; });
   });
 </script>
+ <!-- form thing -->
+ <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+<script>
+  // Initialize Formspree
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { 
+    formElement: '#contact-form', 
+    formId: 'xreorqkn',
+    onSuccess: function() {
+      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('fs-status-success').style.display = 'block';
+    },
+    onError: function() {
+      document.getElementById('fs-status-error').style.display = 'block';
+    }
+  });
+
+  // Ensure custom cursor works on the new button and inputs
+  document.querySelectorAll('input, textarea, button').forEach(el => {
+    el.addEventListener('mouseenter', () => cur.classList.add('hover'));
+    el.addEventListener('mouseleave', () => cur.classList.remove('hover'));
+  });
+</script>
+  
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
