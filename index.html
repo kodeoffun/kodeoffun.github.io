@@ -981,7 +981,7 @@
   <div class="sw-rule-r"></div>
 </div>
 
-<!-- old contact
+<!-- old contact -->
   <form
   action="https://formspree.io/f/xreorqkn"
   method="POST"
@@ -1000,35 +1000,6 @@
           </h2>
           <br>
         </div>
-        <a href="mailto:kodeoffun@gmail.com" class="contact-email">kodeoffun@gmail.com</a>
-      </div>
-      <div class="cb-rule"></div>
-      <div class="contact-right rv">
-        <div class="c-row">
-          <label class="c-lab">Full Name</label>
-          <input class="c-inp" type="text" placeholder="Kody W">
-        </div>
-        <div class="c-row">
-          <label class="c-lab">Email</label>
-          <input class="c-inp" type="email" placeholder="kodeoffun@gmail.com">
-        </div>
-        <div class="c-row">
-        <!-- 
-          <label class="c-lab">Project / Building</label>
-          <input class="c-inp" type="text" placeholder="Name and location of the building">
-        </div>
-        <div class="c-row">
-          <label class="c-lab">Brief</label>
-          <textarea class="c-ta" placeholder="Scope, timeline, intended use..."></textarea>
-        </div>
-          -->
-        <button class="c-submit">Send Enquiry <span class="c-arrow">→</span></button>
-      </div>
-    </div>
-  </div>
-  <div class="sw-rule-r" style="border-left-color: rgba(255,255,255,0.05)"></div>
-</div> -->
-<footer>
   <div class="ft-rule-l"></div>
   <div class="ft-left">
     <span class="ft-logo">Kody Wu</span>
@@ -1043,16 +1014,14 @@
       <input type="text" name="name" placeholder="PROJECT INQUIRY OR MESSAGE" required data-fs-field></textarea>
       <button type="submit" data-fs-submit-btn>Send Request</button>
     </form>
-  </div>
+  </div>  <div class="sw-rule-r" style="border-left-color: rgba(255,255,255,0.05)"></div>
+</div> 
+<!-- footer -->
 
-  <div class="ft-right">
-    <span class="ft-copy">© 2026 kodeoffun</span>
-    <a href="#" class="ft-link">Instagram</a>
-    <a href="#" class="ft-link">Behance</a>
-  </div>
-  <div class="ft-rule-r"></div>
-</footer>
-<!-- old footer
+
+ 
+
+<!-- old footer -->
 <footer>
   <div class="ft-rule-l"></div>
   <div class="ft-left">
@@ -1066,7 +1035,7 @@
   </div>
   <div class="ft-rule-r"></div>
 </footer>
--->
+
 <script>
   // Crosshair cursor
   const cur = document.getElementById('cur');
@@ -1098,7 +1067,7 @@
  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 <script>
-  // Initialize Formspree
+  //  Formspree
   window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
   formspree('initForm', { 
     formElement: '#contact-form', 
@@ -1112,7 +1081,6 @@
     }
   });
 
-  // Ensure custom cursor works on the new button and inputs
   document.querySelectorAll('input, textarea, button').forEach(el => {
     el.addEventListener('mouseenter', () => cur.classList.add('hover'));
     el.addEventListener('mouseleave', () => cur.classList.remove('hover'));
