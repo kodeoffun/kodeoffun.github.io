@@ -628,7 +628,9 @@
     .contact-right { padding: 3rem 2rem; }
     .section-wrap { grid-template-columns: 1fr; }
     .sw-rule-l, .sw-rule-r { display: none; }
-    nav { grid-template-columns: 1fr auto; }
+    nav { grid-template-columns: 1fr auto; 
+      padding: 0 10px;
+    }
     .nav-rule { display: none; }
     .nav-logo-cell { grid-column: 1; }
     .nav-links-cell { grid-column: 2; }
@@ -727,6 +729,28 @@
     background: rgba(255,255,255,0.05);
     border-color: #f0ede8;
   }
+  /* ── MOBILE RESPONSIVENESS FOR CONTACT FORM ── */
+@media (max-width: 900px) {
+  #contact-form {
+    align-items: stretch; /* Stretches inputs and button to full width */
+    width: 100%;
+  }
+
+  .contact-right {
+    padding: 3rem 1.5rem; /* Reduces padding so the form fits on screen */
+  }
+
+  .c-submit {
+    width: 100%; /* Button takes up full width on mobile */
+    min-width: unset;
+    justify-content: space-between;
+  }
+
+  .fs-status-msg {
+    text-align: center; /* Centers success/error text on mobile */
+  }
+}
+
 </style>
 </head>
 <body>
