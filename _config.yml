@@ -4,3 +4,5 @@ description: >-
   Photography portfolio for Kody Wu.
 baseurl: "" # <-- Change this to your exact GitHub repo name!
 url: "https://kodeoffun.github.io"
+plugins:
+  - jekyll-seo-tag
