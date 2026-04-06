@@ -607,6 +607,46 @@
   .rv-l.on { opacity: 1; transform: none; }
 
   @media (max-width: 900px) {
+    /*new */
+     .section-wrap, 
+  .sw-inner, 
+  .contact-band {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .sw-rule-l, 
+  .sw-rule-r, 
+  .cb-rule {
+    display: none !important;
+  }
+
+  .contact-right {
+    width: 100% !important;
+    padding: 2rem 1.5rem !important;
+  }
+
+  #contact-form {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+  }
+
+  .c-submit {
+    width: 100% !important;
+    margin-right: 0 !important;
+    min-width: 0 !important;
+    justify-content: space-between !important;
+  }
+
+  .fs-status-msg {
+    text-align: left !important;
+    width: 100% !important;
+  }
+  /* end if new */
+    
     .hero { grid-template-columns: 1fr; }
     .hero-rule-l, .hero-rule-r { display: none; }
     .hero-main { grid-template-columns: 1fr; }
