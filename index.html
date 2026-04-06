@@ -1078,30 +1078,26 @@
 
       <div class="cb-rule"></div>
 
-      <div class="contact-right rv">
-        <p id="fs-status-success" style="display:none; font-size: 0.6rem; margin-top: 1rem; color: #4a7fa5; letter-spacing: 0.1em;">Message sent successfully.</p>
-<p id="fs-status-error" style="display:none; font-size: 0.6rem; margin-top: 1rem; color: #a54a4a; letter-spacing: 0.1em;">There was an error. Please try again.</p>
-
-        <form id="contact-form" action="https://formspree.io/f/xreorqkn" method="POST">
-          <div class="c-row">
-            <label class="c-lab">Full Name</label>
-            <input class="c-inp" type="text" name="name" placeholder="Kody W" required data-fs-field>
-          </div>
-          <div class="c-row">
-            <label class="c-lab">Email</label>
-            <input class="c-inp" type="email" name="email" placeholder="kodeoffun@gmail.com" required data-fs-field>
-          </div>
-          </div> 
-          <p id="fs-status" style="display:none; font-size: 0.6rem; margin-top: 1rem; color: #4a7fa5;"></p>
-
-          <button type="submit" class="c-submit" data-fs-submit-btn>
-            <span>Send Enquiry</span>
-            <span class="c-arrow">→</span>
-          </button>
-        </form>
-      </div>
+    <div class="contact-right rv">
+  <form id="contact-form">
+    <div class="c-row">
+      <label class="c-lab">Full Name</label>
+      <input class="c-inp" type="text" name="name" placeholder="Kody W" required>
     </div>
-  </div>
+    <div class="c-row">
+      <label class="c-lab">Email</label>
+      <input class="c-inp" type="email" name="email" placeholder="kodeoffun@gmail.com" required>
+    </div>
+
+    <button type="submit" class="c-submit" data-fs-submit-btn>
+      <span>Send Enquiry</span>
+      <span class="c-arrow">→</span>
+    </button>
+
+    <p id="fs-status-success" class="fs-status-msg" style="display:none; color: #4a7fa5;">Message sent successfully.</p>
+    <p id="fs-status-error" class="fs-status-msg" style="display:none; color: #a54a4a;">There was an error. Please try again.</p>
+  </form>
+</div>
   <div class="sw-rule-r" style="border-left-color: rgba(255,255,255,0.05)"></div>
 </div>
  
