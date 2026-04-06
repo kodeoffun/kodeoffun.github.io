@@ -1079,9 +1079,8 @@
       <div class="cb-rule"></div>
 
       <div class="contact-right rv">
-         <div class="ft-center">
-    <div id="fs-status-success" class="form-status" style="color: var(--accent);">Message received. Thank you.</div>
-    <div id="fs-status-error" class="form-status" style="color: #a54a4a;">Error sending message. Please try again.</div>
+        <p id="fs-status-success" style="display:none; font-size: 0.6rem; margin-top: 1rem; color: #4a7fa5; letter-spacing: 0.1em;">Message sent successfully.</p>
+<p id="fs-status-error" style="display:none; font-size: 0.6rem; margin-top: 1rem; color: #a54a4a; letter-spacing: 0.1em;">There was an error. Please try again.</p>
 
         <form id="contact-form" action="https://formspree.io/f/xreorqkn" method="POST">
           <div class="c-row">
@@ -1174,5 +1173,27 @@
 </script>
   
 <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  
+  formspree('initForm', { 
+    formElement: '#contact-form', // Ensure your <form> has id="contact-form"
+    formId: 'xreorqkn',
+    onSuccess: function() {
+      // Hide form and show success message
+      document.getElementById('contact-form').style.opacity = '0.3';
+      document.getElementById('contact-form').style.pointerEvents = 'none';
+      document.getElementById('fs-status-success').style.display = 'block';
+      document.getElementById('fs-status-error').style.display = 'none';
+    },
+    onError: function() {
+      // Show error message
+      document.getElementById('fs-status-error').style.display = 'block';
+      document.getElementById('fs-status-success').style.display = 'none';
+    }
+  });
+</script>
 </body>
 </html>
