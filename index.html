@@ -637,54 +637,95 @@
     .ft-right { justify-content: flex-start; flex-wrap: wrap; }
   }
   /* ── form ── */
-  .ft-contact {
+ /* ── CONTACT (MATCHING REFERENCE) ── */
+  .contact-band {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    background: #1a2840; /* The specific deep navy from your image */
+    color: var(--stone);
+  }
+  .cb-rule { background: rgba(255,255,255,0.08); }
+
+  .contact-left {
+    padding: 6rem 5rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    max-width: 400px;
+    justify-content: space-between;
+  }
+  
+  .contact-heading {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(3.5rem, 6vw, 6.5rem);
+    line-height: 0.85;
+    color: #f0ede8;
+  }
+  
+  /* The "your work" styling */
+  .contact-heading em { 
+    font-style: italic; 
+    color: #4a7fa5; /* The specific muted blue from the image */
+    display: block;
+    margin-top: 0.2rem;
   }
 
-  .ft-contact input, 
-  .ft-contact textarea {
-    background: transparent;
+  .contact-email-link {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #f0ede8;
+    text-decoration: none;
+    margin-top: 3rem;
+    display: inline-block;
+  }
+
+  .contact-right { padding: 6rem 5rem; }
+
+  .c-row {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .c-row:first-of-type { border-top: 1px solid rgba(255,255,255,0.1); }
+
+  .c-lab { 
+    font-size: 0.5rem; 
+    letter-spacing: 0.25em; 
+    text-transform: uppercase; 
+    color: #4a7fa5; 
+  }
+
+  .c-inp {
+    background: none;
     border: none;
-    border-bottom: 1px solid var(--line);
-    padding: 0.5rem 0;
-    font-family: 'DM Mono', monospace;
-    font-size: 13px;
-    color: var(--void);
     outline: none;
-    transition: border-color 0.3s ease;
-  }
-
-  .ft-contact input:focus, 
-  .ft-contact textarea:focus {
-    border-bottom-color: var(--void);
-  }
-
-  .ft-contact button {
-    align-self: flex-start;
-    background: var(--void);
-    color: var(--stone);
-    border: none;
-    padding: 10px 20px;
     font-family: 'DM Mono', monospace;
-    font-size: 11px;
+    font-size: 0.9rem;
+    color: rgba(240,237,232,0.4); /* Dimmed text for the input/placeholder */
+  }
+
+  .c-submit {
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #f0ede8;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    cursor: none; /* Keeps your custom cursor active */
-    transition: opacity 0.3s ease;
+    padding: 1.25rem 2rem;
+    cursor: none;
+    transition: all 0.3s ease;
   }
-
-  .ft-contact button:hover {
-    opacity: 0.8;
-  }
-
-  .form-status {
-    font-size: 11px;
-    margin-bottom: 10px;
-    display: none;
+  .c-submit:hover {
+    background: rgba(255,255,255,0.05);
+    border-color: #f0ede8;
   }
 </style>
 </head>
@@ -981,7 +1022,7 @@
   <div class="sw-rule-r"></div>
 </div>
 
-<!-- old contact -->
+<!-- old contact 
   <form
   action="https://formspree.io/f/xreorqkn"
   method="POST"
@@ -1016,9 +1057,50 @@
     </form>
   </div>  <div class="sw-rule-r" style="border-left-color: rgba(255,255,255,0.05)"></div>
 </div> 
+      -->
 <!-- footer -->
 
+<div class="section-wrap" id="contact">
+  <div class="sw-rule-l" style="border-right-color: rgba(255,255,255,0.05)"></div>
+  <div class="sw-inner">
+    <div class="contact-band">
+      <div class="contact-left rv">
+        <div>
+          <p style="font-size:.5rem; letter-spacing:.3em; text-transform:uppercase; color:#4a7fa5; margin-bottom:2.5rem;">Commission a Project</p>
+          <h2 class="contact-heading">
+            Let's<br>
+            document<br>
+            <em>your work.</em>
+          </h2>
+        </div>
+        <a href="mailto:kodeoffun@gmail.com" class="contact-email-link">kodeoffun@gmail.com</a>
+      </div>
 
+      <div class="cb-rule"></div>
+
+      <div class="contact-right rv">
+        <form id="contact-form" action="https://formspree.io/f/xreorqkn" method="POST">
+          <div class="c-row">
+            <label class="c-lab">Full Name</label>
+            <input class="c-inp" type="text" name="name" placeholder="Kody W" required data-fs-field>
+          </div>
+          <div class="c-row">
+            <label class="c-lab">Email</label>
+            <input class="c-inp" type="email" name="email" placeholder="kodeoffun@gmail.com" required data-fs-field>
+          </div>
+          
+          <p id="fs-status" style="display:none; font-size: 0.6rem; margin-top: 1rem; color: #4a7fa5;"></p>
+
+          <button type="submit" class="c-submit" data-fs-submit-btn>
+            <span>Send Enquiry</span>
+            <span class="c-arrow">→</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="sw-rule-r" style="border-left-color: rgba(255,255,255,0.05)"></div>
+</div>
  
 
 <!-- old footer -->
