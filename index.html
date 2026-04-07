@@ -277,39 +277,20 @@
     overflow: hidden;
     position: relative;
   }
-  .project-bg {
-    width: 100%; height: 100%;
-    transition: transform .7s cubic-bezier(.25,.46,.45,.94);
-  }
-  .project-cell:hover .project-bg { transform: scale(1.05); }
+  /* NEWWWWW */
+.project-img {
+  width: 100%; 
+  height: 100%;
+  object-fit: cover; /* Acts like background-size: cover */
+  object-position: center;
+  transition: transform .7s cubic-bezier(.25,.46,.45,.94);
+  display: block;
+}
 
-  /* Architectural photo palettes */
-  .a1 { 
-  background-image: url('IMG_3744.JPG'); 
-  background-size: cover;
-  background-position: center;
-  }
-  .a2 {
- background-image: url('IMG_5492.JPG'); 
-  background-size: cover;
-  background-position: center;      }
-  .a3 {
- background-image: url('IMG_8456.JPG'); 
-  background-size: cover;
-  background-position: center;      
-  }
- .a4 {
- background-image: url('IMG_6858.JPG'); 
-  background-size: cover;
-  background-position: center;      }
-  .a5 {
- background-image: url('IMG_7467.JPG'); 
-  background-size: cover;
-  background-position: center;      }
-  .a6 { 
- background-image: url('IMG_2949.JPG'); 
-  background-size: cover;
-  background-position: center;      }
+/* The hover effect now targets the img */
+.project-cell:hover .project-img { 
+  transform: scale(1.05); 
+}
 
   /* Fake architectural details */
   .a1::after { content:''; position:absolute; bottom:30%; left:20%; width:60%; height:1px; background:rgba(255,255,255,0.08); }
@@ -912,14 +893,29 @@
       <span class="s-meta">06 of 20+ — 2023/26</span>
     </div>
     <div class="projects-grid">
+
+      <!-- olddddddddddddddddddddddddddddddddd
       <div class="project-cell rv">
         <div class="project-photo"><div class="project-bg a1"></div></div>
         <div class="project-num">001</div>
+        
         <div class="project-info">
           <span class="project-name">Queen's Park</span>
           <span class="project-tag">Subway · Toronto</span>
         </div>
       </div>
+      -->
+
+      <div class="project-cell rv">
+  <div class="project-photo a1">
+    <img src="queens-park-subway.jpg" alt="Symmetrical architectural view of the Queen's Park subway station platform" class="project-img">
+  </div>
+  <div class="project-num">001</div>
+  <div class="project-info">
+    <span class="project-name">Queen's Park</span>
+    <span class="project-tag">Subway · Toronto</span>
+  </div>
+</div>
       <div class="project-cell rv" style="transition-delay:.08s">
         <div class="project-photo"><div class="project-bg a2"></div></div>
         <div class="project-num">002</div>
