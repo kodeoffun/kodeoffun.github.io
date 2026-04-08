@@ -161,28 +161,40 @@
     min-height: 420px;
   }
   /* Architectural scene — abstract concrete planes */
-  .hero-scene {
-   position: absolute; 
+ /* Architectural scene container */
+.hero-scene {
+  position: absolute; 
   inset: 0;
-  background-image: url('IMG_9969.JPG'); 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  }
-  .hero-scene::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 38%;
-    width: 1px; height: 100%;
-    background: rgba(255,255,255,0.06);
-  }
-  .hero-scene::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 62%;
-    width: 1px; height: 100%;
-    background: rgba(255,255,255,0.04);
-  }
+  /* background properties removed */
+}
+
+/* NEW: The actual hero image */
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.hero-scene::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 38%;
+  width: 1px; height: 100%;
+  background: rgba(255,255,255,0.06);
+  z-index: 1; /* Added to ensure it floats over the new img */
+  pointer-events: none;
+}
+.hero-scene::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 62%;
+  width: 1px; height: 100%;
+  background: rgba(255,255,255,0.04);
+  z-index: 1; /* Added to ensure it floats over the new img */
+  pointer-events: none;
+}
   /* Horizontal beam of light */
   .hero-light {
     position: absolute;
@@ -855,16 +867,20 @@
       </div>
     </div>
     <div class="hero-divider"></div>
-    <div class="hero-image-pane">
-      <div class="hero-scene">
-        <div class="hero-light"></div>
-        <div class="hero-light-2"></div>
-        <div class="hero-col"></div>
-      </div>
-      <div class="coord coord-tl">52°31'N 13°24'E</div>
-      <div class="coord coord-br">ISO 100 · f/11 · 1/125s</div>
-      <div class="hero-watermark">kodeoffun 2026</div>
-    </div>
+  
+<div class="hero-image-pane">
+  <div class="hero-scene">
+    <img src="IMG_9969.JPG" alt="Abstract architectural concrete planes" class="hero-img">
+    
+    <div class="hero-light"></div>
+    <div class="hero-light-2"></div>
+    <div class="hero-col"></div>
+  </div>
+  <div class="coord coord-tl">52°31'N 13°24'E</div>
+  <div class="coord coord-br">ISO 100 · f/11 · 1/125s</div>
+  <div class="hero-watermark">kodeoffun 2026</div>
+</div>
+    
   </div>
   <div class="hero-bottom-bar">
     <div class="hbb-cell">
