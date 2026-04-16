@@ -913,18 +913,7 @@
     </div>
     <div class="projects-grid">
 
-      <!-- olddddddddddddddddddddddddddddddddd
-      <div class="project-cell rv">
-        <div class="project-photo"><div class="project-bg a1"></div></div>
-        <div class="project-num">001</div>
-        
-        <div class="project-info">
-          <span class="project-name">Queen's Park</span>
-          <span class="project-tag">Subway · Toronto</span>
-        </div>
-      </div>
-      -->
-
+   
 <a href="queens-park" class="project-cell rv" style="text-decoration: none; color: inherit; display: block;">  <div class="project-photo a1">
     <img src="queens-park-subway.jpg" alt="Symmetrical architectural view of the Queen's Park subway station platform" class="project-img">
   </div>
@@ -1151,43 +1140,7 @@
   </div>
   <div class="sw-rule-r"></div>
 </div>
-
-<!-- old contact 
-  <form
-  action="https://formspree.io/f/xreorqkn"
-  method="POST"
->
-<div class="section-wrap" id="contact">
-  <div class="sw-rule-l" style="border-right-color: rgba(255,255,255,0.05)"></div>
-  <div class="sw-inner">
-    <div class="contact-band">
-      <div class="contact-left rv">
-        <div>
-          <p style="font-size:.52rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);margin-bottom:2rem;">Commission a Project</p>
-          <h2 class="contact-heading">
-            Let's<br>
-            document<br>
-            <em>your work.</em>
-          </h2>
-          <br>
-        </div>
-  <div class="ft-rule-l"></div>
-  <div class="ft-left">
-    <span class="ft-logo">Kody Wu</span>
-  </div>
-
-  <div class="ft-center">
-    <div id="fs-status-success" class="form-status" style="color: var(--accent);">Message received. Thank you.</div>
-    <div id="fs-status-error" class="form-status" style="color: #a54a4a;">Error sending message. Please try again.</div>
-
-    <form id="contact-form" class="ft-contact">
-      <input type="email" name="email" placeholder="EMAIL ADDRESS" required data-fs-field />
-      <input type="text" name="name" placeholder="PROJECT INQUIRY OR MESSAGE" required data-fs-field></textarea>
-      <button type="submit" data-fs-submit-btn>Send Request</button>
-    </form>
-  </div>  <div class="sw-rule-r" style="border-left-color: rgba(255,255,255,0.05)"></div>
-</div> 
-      -->
+  
 <!-- footer -->
 
 <div class="section-wrap" id="contact">
@@ -1314,14 +1267,14 @@
     formElement: '#contact-form', // Ensure your <form> has id="contact-form"
     formId: 'xreorqkn',
     onSuccess: function() {
-      // Hide form and show success message
+      //  success message
       document.getElementById('contact-form').style.opacity = '0.3';
       document.getElementById('contact-form').style.pointerEvents = 'none';
       document.getElementById('fs-status-success').style.display = 'block';
       document.getElementById('fs-status-error').style.display = 'none';
     },
     onError: function() {
-      // Show error message
+      //  error message
       document.getElementById('fs-status-error').style.display = 'block';
       document.getElementById('fs-status-success').style.display = 'none';
     }
