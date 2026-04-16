@@ -1,8 +1,9 @@
-title: Kody Wu — Photography
+title: Kody Wu - Photography
 email: kodeoffun@gmail.com
 description: >-
-  Photography portfolio for Kody Wu.
+  Kody Wu, Toronto-based photographer. Photography portfolio of Kody Wu.
 baseurl: "" # <-- Change this to your exact GitHub repo name!
 url: "https://kodeoffun.github.io"
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
