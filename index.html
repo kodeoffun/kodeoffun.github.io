@@ -208,16 +208,8 @@
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(74,127,165,0.15) 40%, rgba(74,127,165,0.2) 55%, transparent);
 
-  }
-  /* Column shadow */
-  
-/*  .hero-col {
-    position: absolute;
-    top: 0; left: 55%;
-    width: 18%; height: 100%;
-    background: linear-gradient(180deg, rgba(20,18,16,0.6) 0%, rgba(10,10,8,0.8) 100%);
-  }
-  */
+  }  
+
   .hero-watermark {
     position: absolute; bottom: 2rem; right: 2rem;
     font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
@@ -296,7 +288,7 @@
 .project-img {
   width: 100%; 
   height: 100%;
-  object-fit: cover; /* Acts like background-size: cover */
+  object-fit: cover; 
   object-position: center;
   transition: transform .7s cubic-bezier(.25,.46,.45,.94);
   display: block;
@@ -307,7 +299,7 @@
   transform: scale(1.05); 
 }
 
-  /* Fake architectural details */
+  /*  details */
   .a1::after { content:''; position:absolute; bottom:30%; left:20%; width:60%; height:1px; background:rgba(255,255,255,0.08); }
   .a2::after { content:''; position:absolute; left:40%; top:0; bottom:0; width:1px; background:rgba(255,255,255,0.06); }
   .a3::after { content:''; position:absolute; top:40%; left:0; right:0; height:1px; background:rgba(74,127,165,0.12); }
@@ -332,7 +324,7 @@
     z-index: 2;
   }
 
-  /* ── MANIFESTO ── */
+  /* ── quote ── */
   .manifesto {
     padding: 6rem 3rem;
     display: grid;
@@ -715,12 +707,12 @@
     .ft-right { justify-content: flex-start; flex-wrap: wrap; }
   }
   /* ── form ── */
- /* ── CONTACT (MATCHING REFERENCE) ── */
+ /* ── CONTACT ── */
   .contact-band {
     display: grid;
     grid-template-columns: 1fr 1px 1fr;
     border-bottom: 1px solid rgba(255,255,255,0.05);
-    background: #1a2840; /* The specific deep navy from your image */
+    background: #1a2840;
     color: var(--stone);
   }
   .cb-rule { background: rgba(255,255,255,0.08); }
@@ -742,7 +734,7 @@
   /* The "your work" styling */
   .contact-heading em { 
     font-style: italic; 
-    color: #4a7fa5; /* The specific muted blue from the image */
+    color: #4a7fa5; /* The  blue from the image */
     display: block;
     margin-top: 0.2rem;
   }
@@ -781,7 +773,7 @@
     outline: none;
     font-family: 'DM Mono', monospace;
     font-size: 0.9rem;
-    color: rgba(240,237,232,0.4); /* Dimmed text for the input/placeholder */
+    color: rgba(240,237,232,0.4); /* Dimmed text for the input */
   }
 
   .c-submit {
@@ -805,7 +797,7 @@
     background: rgba(255,255,255,0.05);
     border-color: #f0ede8;
   }
-  /* ── MOBILE RESPONSIVENESS FOR CONTACT FORM ── */
+  /* ── thing for mobile compatibility ── */
 @media (max-width: 900px) {
   #contact-form {
     align-items: stretch; /* Stretches inputs and button to full width */
@@ -992,12 +984,7 @@
       <div class="manifesto-rule"></div>
       <div class="manifesto-right rv">
         <div class="manifesto-stat-grid">
-   <!--     
-          <div class="m-stat">
-            <div class="m-stat-n">48<sup>+</sup></div>
-            <div class="m-stat-l">Commissions</div>
-          </div>
-         --> 
+
           <div class="m-stat">
             <div class="m-stat-n">3</div>
             <div class="m-stat-l">Countries</div>
@@ -1006,12 +993,7 @@
             <div class="m-stat-n">3<sup>yr</sup></div>
             <div class="m-stat-l">Experience</div>
           </div>
-        <!--
-          <div class="m-stat">
-            <div class="m-stat-n">6<sup>k</sup></div>
-            <div class="m-stat-l">Film Sheets</div>
-          </div>
-          -->
+       
         </div>
       </div>
     </div>
@@ -1106,22 +1088,6 @@
       </div>
       <div class="about-rule"></div>
       <div class="about-right rv">
-       <!--  <div class="about-spec-row">
-          <div class="spec-label-sm">Camera Systems</div>
-          <div class="spec-val-sm">Linhof Technika 4×5, Deardorff 8×10</div>
-        </div>
-        -->
-     <!-- 
-        <div class="about-spec-row">
-          <div class="spec-label-sm">Film Stocks</div>
-          <div class="spec-val-sm">Kodak Ektar 100, Ilford FP4+, Fuji Provia</div>
-        </div>
-        -->
-   <!--      <div class="about-spec-row">
-          <div class="spec-label-sm">Print Processes</div>
-          <div class="spec-val-sm">C-type, Pigment, Silver Gelatin</div>
-        </div>
-        -->
         
         <div class="about-spec-row">
           <div class="spec-label-sm">Studio Location</div>
@@ -1264,7 +1230,7 @@
   window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
   
   formspree('initForm', { 
-    formElement: '#contact-form', // Ensure your <form> has id="contact-form"
+    formElement: '#contact-form', 
     formId: 'xreorqkn',
     onSuccess: function() {
       //  success message
