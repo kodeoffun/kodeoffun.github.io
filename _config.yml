@@ -5,4 +5,4 @@ description: >-
 baseurl: "" 
 url: "https://kodeoffun.github.io"
 plugins:
-  - jekyll-seo-tag
+
