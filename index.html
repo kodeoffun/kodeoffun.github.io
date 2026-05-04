@@ -5,10 +5,8 @@
   <meta name="google-site-verification" content="IOYMHHpQLPz8_QbuNTEhmsHXyR3DqNpw2pH0qZ--83M" />
   <meta name="description" content="Portfolio of Kody Wu, Toronto-based photographer specializing in architectural and small format photography. ">
 <!-- test   !-->
-<title>
-Kody Wu — Toronto/Markham Photography
-</title>
-    <meta property="og:title" content="Kody Wu — Architectural Photography">
+
+  <meta property="og:title" content="Kody Wu — Architectural Photography">
 <meta property="og:description" content="Toronto-based photographer specializing in architectural and small format photography.">
 <meta property="og:image" content="https://kodeoffun.github.io/IMG_9969.JPG"> <meta property="og:url" content="https://kodeoffun.github.io/">
 <meta property="og:type" content="website">
@@ -26,6 +24,7 @@ Kody Wu — Toronto/Markham Photography
   "url" : "https://kodeoffun.github.io/"
 }
 </script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kody Wu - Photography</title>
@@ -409,9 +408,6 @@ Kody Wu — Toronto/Markham Photography
     border-right: 1px solid var(--line);
     cursor: none; overflow: hidden;
     position: relative;
-    flex: 1;               /* Makes them share the width equally */
-  min-width: 300px;      /* Prevents them from getting too skinny on small screens */
-  display: block;
   }
   .series-item:last-child { border-right: none; }
   .series-photo {
@@ -421,9 +417,6 @@ Kody Wu — Toronto/Markham Photography
   .series-photo-bg {
     width: 100%; height: 100%;
     transition: transform .7s cubic-bezier(.25,.46,.45,.94);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
   }
   .series-item:hover .series-photo-bg { transform: scale(1.06); }
   .s1 { background: linear-gradient(180deg, #0c1020 0%, #1a2438 50%, #0a0e18 100%); }
@@ -629,8 +622,7 @@ Kody Wu — Toronto/Markham Photography
      .section-wrap, 
   .sw-inner, 
   .contact-band {
-    display: flex !important;
-    flex-wrap: wrap;
+    display: block !important;
     width: 100% !important;
     padding: 0 !important;
   }
@@ -1037,51 +1029,40 @@ Kody Wu — Toronto/Markham Photography
       <h2 class="s-heading">Ongoing <em>Series</em></h2>
       <span class="s-meta">Long-form studies</span>
     </div>
-
-    <a href="high-park.html" class="series-item rv" style="transition-delay:.1s;">
-      <div class="series-photo">
-        <div class="series-photo-bg s2" style="background-image: url('Kody-Wu.jpg');"></div>
+    <div class="series-strip">
+      <div class="series-item rv">
+        <div class="series-photo"><div class="series-photo-bg s1"></div></div>
+        <div class="series-label">
+          <div class="series-n">I —</div>
+          <div class="series-title">huzzah</div>
+          <div class="series-loc">Hong Kong · Dubai · NYC</div>
+        </div>
       </div>
-      <div class="series-label">
-        <div class="series-n">I —</div>
-        <div class="series-title">High Park</div>
-        <div class="series-loc">Toronto</div>
+      <div class="series-item rv" style="transition-delay:.1s">
+        <div class="series-photo"><div class="series-photo-bg s2"></div></div>
+        <div class="series-label">
+          <div class="series-n">II —</div>
+          <div class="series-title">picture goes here</div>
+          <div class="series-loc">Eastern Europe</div>
+        </div>
       </div>
-    </a>
-
-    <a href="project-002.html" class="series-item rv" style="transition-delay:.1s;">
-      <div class="series-photo">
-        <div class="series-photo-bg s2" style="background-image: url('image-2.webp');"></div>
+      <div class="series-item rv" style="transition-delay:.2s">
+        <div class="series-photo"><div class="series-photo-bg s3"></div></div>
+        <div class="series-label">
+          <div class="series-n">III —</div>
+          <div class="series-title">67</div>
+          <div class="series-loc">Doorways, 14 countries</div>
+        </div>
       </div>
-      <div class="series-label">
-        <div class="series-n">II —</div>
-        <div class="series-title">Eastern Europe</div>
-        <div class="series-loc">Project Title</div>
+      <div class="series-item rv" style="transition-delay:.3s">
+        <div class="series-photo"><div class="series-photo-bg s4"></div></div>
+        <div class="series-label">
+          <div class="series-n">IV —</div>
+          <div class="series-title">text or smth idk</div>
+          <div class="series-loc">Architecture</div>
+        </div>
       </div>
-    </a>
-
-    <a href="project-003.html" class="series-item rv" style="transition-delay:.2s;">
-      <div class="series-photo">
-        <div class="series-photo-bg s3" style="background-image: url('image-3.webp');"></div>
-      </div>
-      <div class="series-label">
-        <div class="series-n">III —</div>
-        <div class="series-title">67</div>
-        <div class="series-loc">Doorways, 14 countries</div>
-      </div>
-    </a>
-
-    <a href="project-004.html" class="series-item rv" style="transition-delay:.3s;">
-      <div class="series-photo">
-        <div class="series-photo-bg s4" style="background-image: url('image-4.webp');"></div>
-      </div>
-      <div class="series-label">
-        <div class="series-n">IV —</div>
-        <div class="series-title">Architecture</div>
-        <div class="series-loc">Structural Studies</div>
-      </div>
-    </a>
-
+    </div>
   </div>
   <div class="sw-rule-r"></div>
 </div>
