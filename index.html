@@ -409,6 +409,9 @@ Kody Wu — Toronto/Markham Photography
     border-right: 1px solid var(--line);
     cursor: none; overflow: hidden;
     position: relative;
+    flex: 1;               /* Makes them share the width equally */
+  min-width: 300px;      /* Prevents them from getting too skinny on small screens */
+  display: block;
   }
   .series-item:last-child { border-right: none; }
   .series-photo {
@@ -626,7 +629,8 @@ Kody Wu — Toronto/Markham Photography
      .section-wrap, 
   .sw-inner, 
   .contact-band {
-    display: block !important;
+    display: flex !important;
+    flex-wrap: wrap;
     width: 100% !important;
     padding: 0 !important;
   }
