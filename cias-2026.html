@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Canadian International Auto Show - 2026</title>
+<title>Prosper Ontario - 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -97,12 +97,13 @@
   .gallery-item { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); position: relative; overflow: hidden; cursor: none; }
   .gallery-item:nth-child(2n) { border-right: none; }
   
-  /* Full width image */
-  .gallery-item.full { grid-column: 1 / -1; border-right: none; aspect-ratio: 21/9; }
+/* Full width image */
+  .gallery-item.full { grid-column: 1 / -1; border-right: none; aspect-ratio: 16/9; max-height: 80vh; }
   /* Portrait style image */
-  .gallery-item.portrait { aspect-ratio: 3/4; }
+/* Portrait style image */
+  .gallery-item.portrait { height: 65vh; width: 100%; }
   /* Landscape style image */
-  .gallery-item.landscape { aspect-ratio: 4/3; }
+  .gallery-item.landscape { height: 65vh; width: 100%; }
 
   .g-photo { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); display: block; }
   .gallery-item:hover .g-photo { transform: scale(1.03); }
@@ -116,8 +117,7 @@
   .gallery-item:hover .g-caption { opacity: 1; transform: translateY(0); }
 
   /* Architectural detail lines floating over photos */
-  .arch-line-v { position: absolute; left: 30%; top: 0; bottom: 0; width: 1px; background: rgba(255,255,255,0.15); pointer-events: none; z-index: 2; }
-  .arch-line-h { position: absolute; top: 70%; left: 0; right: 0; height: 1px; background: rgba(255,255,255,0.15); pointer-events: none; z-index: 2; }
+  
 
   /* ── FOOTER ── */
   footer { display: grid; grid-template-columns: 60px 1fr 1fr 60px; border-top: 1px solid var(--line); }
@@ -174,28 +174,24 @@
   <div class="sw-rule-l"></div>
   <div class="sw-inner">
     <div class="project-header rv">
-      <span class="ph-meta">Project No. 001</span>
-      <h1 class="ph-title">Queen's Park <em>Subway</em></h1>
+      <span class="ph-meta">Project No. 002</span>
+      <h1 class="ph-title">Prosper Ontario <em>2026</em></h1>
       <p style="font-size: 0.68rem; line-height: 1.9; color: var(--steel); max-width: 500px;">
-        An exploration of symmetry, brutalist concrete forms, and subterranean light within the TTC transit system.
+        A documentation of Eastern Canada's premier youth business competition at the Westerb Ivey Business School. More photos are avalible upon request.
       </p>
 
       <div class="ph-details-grid">
         <div class="ph-detail-cell">
           <span class="phd-label">Location</span>
-          <span class="phd-val">Toronto, ON</span>
+          <span class="phd-val">London, ON</span>
         </div>
         <div class="ph-detail-cell">
           <span class="phd-label">Year</span>
-          <span class="phd-val">2024</span>
+          <span class="phd-val">2026</span>
         </div>
         <div class="ph-detail-cell">
-          <span class="phd-label">Film</span>
-          <span class="phd-val">Ilford HP5+</span>
-        </div>
-        <div class="ph-detail-cell">
-          <span class="phd-label">Subject</span>
-          <span class="phd-val">Infrastructure</span>
+          <span class="phd-label">Role</span>
+          <span class="phd-val">Media Team (photographer)</span>
         </div>
       </div>
     </div>
@@ -209,27 +205,19 @@
     <div class="gallery-grid">
 
       <div class="gallery-item full rv">
-        <div class="arch-line-v"></div> <img src="queens-park-hero.jpg" alt="Wide shot of Queen's Park Platform" class="g-photo">
-        <div class="g-caption">Platform Level — Looking North</div>
-      </div>
-
-      <div class="gallery-item portrait rv">
-        <img src="queens-park-stairs.jpg" alt="Stairwell concrete details" class="g-photo">
-        <div class="g-caption">Stairwell ascent / ISO 400</div>
-      </div>
-      <div class="gallery-item portrait rv">
-        <div class="arch-line-h"></div> <img src="queens-park-tiles.jpg" alt="Close up of subway tiles" class="g-photo">
-        <div class="g-caption">Texture study: Ceramic and Concrete</div>
+        <div class="arch-line-v"></div> <img src="prosper-closing-ceremony.JPG" alt="Photo of the stage during the closing ceremonies." class="g-photo">
+        <div class="g-caption">Closing Ceremony</div>
       </div>
 
       <div class="gallery-item landscape rv">
-        <img src="queens-park-train.jpg" alt="Train arriving in motion blur" class="g-photo">
-        <div class="g-caption">Motion / 1/15s exposure</div>
+        <img src="hallway.JPG" alt="Hallways of the Western Ivey building" class="g-photo">
+        <div class="g-caption">Final Preparation</div>
       </div>
-      <div class="gallery-item landscape rv">
-        <img src="queens-park-symmetry.jpg" alt="Perfect symmetry down the tunnel" class="g-photo">
-        <div class="g-caption">Subterranean vanishing point</div>
+      <div class="gallery-item portrait rv">
+        <div class="arch-line-h"></div> <img src="speaker.JPG" alt="Prosper Guest Speaker" class="g-photo">
+        <div class="g-caption">Guest Speaker</div>
       </div>
+
 
     </div>
   </div>
