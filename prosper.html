@@ -100,9 +100,10 @@
 /* Full width image */
   .gallery-item.full { grid-column: 1 / -1; border-right: none; aspect-ratio: 16/9; max-height: 80vh; }
   /* Portrait style image */
-  .gallery-item.portrait { aspect-ratio: 3/4; max-height: 60vh; }
+/* Portrait style image */
+  .gallery-item.portrait { height: 65vh; width: 100%; }
   /* Landscape style image */
-  .gallery-item.landscape { aspect-ratio: 4/3; max-height: 60vh; }
+  .gallery-item.landscape { height: 65vh; width: 100%; }
 
   .g-photo { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); display: block; }
   .gallery-item:hover .g-photo { transform: scale(1.03); }
