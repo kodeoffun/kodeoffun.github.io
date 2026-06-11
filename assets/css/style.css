@@ -152,7 +152,7 @@ nav {
 .hero-scene {
  position: absolute; 
 inset: 0;
-background-image: url('IMG_9969.JPG'); 
+background-image: url('assets/IMG_9969.JPG'); 
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -276,29 +276,29 @@ background-repeat: no-repeat;
 
 /* Architectural photo palettes */
 .a1 { 
-background-image: url('IMG_3744.JPG'); 
+background-image: url('assets/IMG_3744.JPG'); 
 background-size: cover;
 background-position: center;
 }
 .a2 {
-background-image: url('IMG_5492.JPG'); 
+background-image: url('assets/IMG_5492.JPG'); 
 background-size: cover;
 background-position: center;      }
 .a3 {
-background-image: url('IMG_8456.JPG'); 
+background-image: url('assets/IMG_8456.JPG'); 
 background-size: cover;
 background-position: center;      
 }
 .a4 {
-background-image: url('IMG_6858.JPG'); 
+background-image: url('assets/IMG_6858.JPG'); 
 background-size: cover;
 background-position: center;      }
 .a5 {
-background-image: url('IMG_7467.JPG'); 
+background-image: url('assets/IMG_7467.JPG'); 
 background-size: cover;
 background-position: center;      }
 .a6 { 
-background-image: url('IMG_2949.JPG'); 
+background-image: url('assets/IMG_2949.JPG'); 
 background-size: cover;
 background-position: center;      }
 
