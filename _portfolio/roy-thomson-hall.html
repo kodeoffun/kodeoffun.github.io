@@ -92,18 +92,18 @@
   .phd-label { font-size: 0.48rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--steel); }
   .phd-val { font-family: 'DM Serif Display', serif; font-size: 1.2rem; font-style: italic; }
 
-  /* ── EDITORIAL GALLERY GRID ── */
-  .gallery-grid { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
-  .gallery-item { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); position: relative; overflow: hidden; cursor: none; }
-  .gallery-item:nth-child(2n) { border-right: none; }
+  /* ── EDITORIAL GALLERY GRID (UPDATED TO FLEXBOX) ── */
+  .gallery-grid { display: flex; flex-wrap: wrap; border-top: 1px solid var(--line); }
+  .gallery-item { border-bottom: 1px solid var(--line); position: relative; overflow: hidden; cursor: none; }
   
-/* Full width image */
-  .gallery-item.full { grid-column: 1 / -1; border-right: none; aspect-ratio: 16/9; max-height: 80vh; }
-  /* Portrait style image */
-/* Portrait style image */
-  .gallery-item.portrait { height: 65vh; width: 100%; }
-  /* Landscape style image */
-  .gallery-item.landscape { height: 65vh; width: 100%; }
+  /* Full width image */
+  .gallery-item.full { width: 100%; height: 80vh; border-right: none; }
+  
+  /* Landscape style image gets more width */
+  .gallery-item.landscape { flex: 1.5; height: 65vh; border-right: 1px solid var(--line); }
+  
+  /* Portrait style image gets less width, preventing horizontal crop */
+  .gallery-item.portrait { flex: 1; height: 65vh; border-right: none; }
 
   .g-photo { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); display: block; }
   .gallery-item:hover .g-photo { transform: scale(1.03); }
@@ -143,9 +143,12 @@
     .nav-links a { padding: 0; font-size: 10px; }
     .ph-details-grid { grid-template-columns: 1fr 1fr; }
     .ph-detail-cell:nth-child(2n) { border-right: none; }
-    .gallery-grid { grid-template-columns: 1fr; }
-    .gallery-item { border-right: none; }
+    
+    /* Mobile adjustments for flex layout */
+    .gallery-grid { flex-direction: column; }
+    .gallery-item { width: 100%; border-right: none !important; flex: none; height: auto !important; }
     .gallery-item.portrait, .gallery-item.landscape, .gallery-item.full { aspect-ratio: 4/3; }
+    
     footer { display: block; padding: 2rem; }
     .ft-left { border: none; padding: 0 0 1rem 0; }
     .ft-right { padding: 0; justify-content: flex-start; gap: 1rem; flex-wrap: wrap; }
@@ -174,9 +177,7 @@
   <div class="sw-rule-l"></div>
   <div class="sw-inner">
     <div class="project-header rv">
-   <!--   <span class="ph-meta">Project No. 002</span>
-      -->
-      <h1 class="ph-title">Roy Thomson Hall<em> 2024</em></h1>
+   <h1 class="ph-title">Roy Thomson Hall<em> 2024</em></h1>
       <p style="font-size: 0.68rem; line-height: 1.9; color: var(--steel); max-width: 500px;">
         Roy Thomson Hall Open House
       </p>
@@ -211,11 +212,11 @@
         <img src="assets/exterior.JPG" alt="Outdoor view of the Roy Thomson Hall" class="g-photo">
         <div class="g-caption">Exterior View</div>
       </div>
+      
       <div class="gallery-item portrait rv">
         <div class="arch-line-h"></div> <img src="assets/cn-tower.JPG" alt="The view of the CN tower from inside the building" class="g-photo">
         <div class="g-caption">CN Tower from inside the building</div>
       </div>
-
 
     </div>
   </div>
