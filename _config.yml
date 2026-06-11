@@ -6,3 +6,7 @@ baseurl: ""
 url: "https://kodeoffun.github.io"
 plugins:
 
+collections:
+  portfolio:
+    output: true
+    permalink: /:name/
