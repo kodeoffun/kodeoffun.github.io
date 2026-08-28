@@ -182,16 +182,13 @@ A first time look at the Streets of Markham track for Indycar. Previously locate
       <div class="ph-details-grid">
         <div class="ph-detail-cell">
           <span class="phd-label">Location</span>
-          <span class="phd-val">London, ON</span>
+          <span class="phd-val">Markham, ON</span>
         </div>
         <div class="ph-detail-cell">
           <span class="phd-label">Year</span>
           <span class="phd-val">2026</span>
         </div>
-        <div class="ph-detail-cell">
-          <span class="phd-label">Role</span>
-          <span class="phd-val">Media Team (photographer)</span>
-        </div>
+
       </div>
     </div>
   </div>
@@ -204,17 +201,17 @@ A first time look at the Streets of Markham track for Indycar. Previously locate
     <div class="gallery-grid">
 
       <div class="gallery-item full rv">
-        <div class="arch-line-v"></div> <img src="assets/prosper-closing-ceremony.JPG" alt="Photo of the stage during the closing ceremonies." class="g-photo">
-        <div class="g-caption">Closing Ceremony</div>
+        <div class="arch-line-v"></div> <img src="assets/IMG_2284-2.JPG" alt="Photo of the podium" class="g-photo">
+        <div class="g-caption">Podium Selfie</div>
       </div>
 
       <div class="gallery-item landscape rv">
-        <img src="assets/hallway.JPG" alt="Hallways of the Western Ivey building" class="g-photo">
-        <div class="g-caption">Final Preparation</div>
+        <img src="assets\IMG_8320.JPG" alt="David Malukas and Marcus Armstrong" class="g-photo">
+        <div class="g-caption">David Malukas and Marcus Armstrong</div>
       </div>
       <div class="gallery-item portrait rv">
-        <div class="arch-line-h"></div> <img src="assets/speaker.JPG" alt="Prosper Guest Speaker" class="g-photo">
-        <div class="g-caption">Guest Speaker</div>
+        <div class="arch-line-h"></div> <img src="assets\IMG_1946.JPG" alt="A tow truck recovers Mick Schumacher's vehicle after a race ending crash" class="g-photo">
+        <div class="g-caption">Recovery of Mick Schumacher's vehicle</div>
       </div>
 
 
@@ -236,7 +233,7 @@ A first time look at the Streets of Markham track for Indycar. Previously locate
 </footer>
 
 <script>
-  // Crosshair Cursor Logic
+  // Crosshair Cursor 
   const cur = document.getElementById('cur');
   document.addEventListener('mousemove', e => {
     cur.style.left = e.clientX + 'px';
@@ -247,7 +244,7 @@ A first time look at the Streets of Markham track for Indycar. Previously locate
     el.addEventListener('mouseleave', () => cur.classList.remove('hover'));
   });
 
-  // Scroll Reveal Logic
+  // Scroll  
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
   }, { threshold: 0.1 });
