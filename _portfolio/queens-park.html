@@ -100,10 +100,12 @@
   .gallery-item.full { width: 100%; height: 80vh; border-right: none; }
   
   /* Landscape style image gets more width */
-  .gallery-item.landscape { flex: 1.5; height: 65vh; border-right: 1px solid var(--line); }
+  .gallery-item.landscape { flex: 1.5; min-width: 300px; height: 65vh; border-right: 1px solid var(--line); }
   
   /* Portrait style image gets less width */
-  .gallery-item.portrait { flex: 1; height: 65vh; border-right: none; }
+  .gallery-item.portrait { flex: 1; min-width: 300px; height: 65vh; border-right: 1px solid var(--line); }
+  /* Remove right border from the last item in a row to avoid double lines */
+  .gallery-item:last-child { border-right: none; }
 
   .g-photo { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); display: block; }
   
@@ -164,7 +166,7 @@
 <nav>
   <div class="nav-rule"></div>
   <div class="nav-logo-cell">
-    <a href="index.html" class="nav-logo">kodeoffun</em></a>
+    <a href="index.html" class="nav-logo">kodeoffun</a>
   </div>
   <div class="nav-links-cell">
     <ul class="nav-links">
@@ -178,7 +180,7 @@
   <div class="sw-rule-l"></div>
   <div class="sw-inner">
     <div class="project-header rv">
-   <h1 class="ph-title">Roy Thomson Hall<em> 2024</em></h1>
+      <h1 class="ph-title">Roy Thomson Hall<em> 2024</em></h1>
       <p style="font-size: 0.68rem; line-height: 1.9; color: var(--steel); max-width: 500px;">
         Roy Thomson Hall Open House
       </p>
@@ -192,7 +194,6 @@
           <span class="phd-label">Year</span>
           <span class="phd-val">2024</span>
         </div>
-
       </div>
     </div>
   </div>
@@ -204,28 +205,27 @@
   <div class="sw-inner">
     <div class="gallery-grid">
 
-     
-        <div class="gallery-item portrait rv">
-        <div class="arch-line-h"></div> <img src="assets/IMG_3878.JPG" alt="" class="g-photo uncropped">
+      <div class="gallery-item portrait rv">
+        <div class="arch-line-h"></div> 
+        <img src="assets/IMG_3878.JPG" alt="" class="g-photo uncropped">
         <div class="g-caption">Pool</div>
       </div>
-       </div>
-  </div>
-   <div class="gallery-item portrait rv">
-        <div class="arch-line-h"></div> <img src="assets/IMG_3942.JPG" alt="" class="g-photo uncropped">
-        <div class="g-caption">Legislative Assembly of Ontario</div>
-      </div>
-       </div>
-  </div>
-   <div class="gallery-item portrait rv">
-        <div class="arch-line-h"></div> <img src="assets/IMG_3932.JPG" alt="" class="g-photo uncropped">
-        <div class="g-caption">Front Entrance of the LAO</div>
-      </div>
-       </div>
-  </div>
       
       <div class="gallery-item portrait rv">
-        <div class="arch-line-h"></div> <img src="assets/IMG_3905.JPG" alt="" class="g-photo uncropped">
+        <div class="arch-line-h"></div> 
+        <img src="assets/IMG_3942.JPG" alt="" class="g-photo uncropped">
+        <div class="g-caption">Legislative Assembly of Ontario</div>
+      </div>
+      
+      <div class="gallery-item portrait rv">
+        <div class="arch-line-h"></div> 
+        <img src="assets/IMG_3932.JPG" alt="" class="g-photo uncropped">
+        <div class="g-caption">Front Entrance of the LAO</div>
+      </div>
+          
+      <div class="gallery-item portrait rv">
+        <div class="arch-line-h"></div> 
+        <img src="assets/IMG_3905.JPG" alt="" class="g-photo uncropped">
         <div class="g-caption">Escalator</div>
       </div>
 
