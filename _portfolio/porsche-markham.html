@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Porsche Markham Ontario - 2026</title>
+<title>Queen's Park</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -92,20 +92,26 @@
   .phd-label { font-size: 0.48rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--steel); }
   .phd-val { font-family: 'DM Serif Display', serif; font-size: 1.2rem; font-style: italic; }
 
-  /* ── EDITORIAL GALLERY GRID ── */
-  .gallery-grid { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
-  .gallery-item { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); position: relative; overflow: hidden; cursor: none; }
-  .gallery-item:nth-child(2n) { border-right: none; }
+  /* ── EDITORIAL GALLERY GRID (FLEXBOX) ── */
+  .gallery-grid { display: flex; flex-wrap: wrap; border-top: 1px solid var(--line); }
+  .gallery-item { border-bottom: 1px solid var(--line); position: relative; overflow: hidden; cursor: none; }
   
-/* Full width image */
-  .gallery-item.full { grid-column: 1 / -1; border-right: none; aspect-ratio: 16/9; max-height: 80vh; }
-  /* Portrait style image */
-/* Portrait style image */
-  .gallery-item.portrait { height: 65vh; width: 100%; }
-  /* Landscape style image */
-  .gallery-item.landscape { height: 65vh; width: 100%; }
+  /* Full width image */
+  .gallery-item.full { width: 100%; height: 80vh; border-right: none; }
+  
+  /* Landscape style image gets more width */
+  .gallery-item.landscape { flex: 1.5; min-width: 300px; height: 65vh; border-right: 1px solid var(--line); }
+  
+  /* Portrait style image gets less width */
+  .gallery-item.portrait { flex: 1; min-width: 300px; height: 65vh; border-right: 1px solid var(--line); }
+  /* Remove right border from the last item in a row to avoid double lines */
+  .gallery-item:last-child { border-right: none; }
 
   .g-photo { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); display: block; }
+  
+  /* Prevents cropping by containing the full image within the container */
+  .g-photo.uncropped { object-fit: contain; }
+
   .gallery-item:hover .g-photo { transform: scale(1.03); }
 
   .g-caption {
@@ -115,9 +121,6 @@
     opacity: 0; transform: translateY(10px); transition: all 0.4s ease;
   }
   .gallery-item:hover .g-caption { opacity: 1; transform: translateY(0); }
-
-  /* Architectural detail lines floating over photos */
-  
 
   /* ── FOOTER ── */
   footer { display: grid; grid-template-columns: 60px 1fr 1fr 60px; border-top: 1px solid var(--line); }
@@ -143,9 +146,12 @@
     .nav-links a { padding: 0; font-size: 10px; }
     .ph-details-grid { grid-template-columns: 1fr 1fr; }
     .ph-detail-cell:nth-child(2n) { border-right: none; }
-    .gallery-grid { grid-template-columns: 1fr; }
-    .gallery-item { border-right: none; }
+    
+    /* Mobile adjustments for flex layout */
+    .gallery-grid { flex-direction: column; }
+    .gallery-item { width: 100%; border-right: none !important; flex: none; height: auto !important; }
     .gallery-item.portrait, .gallery-item.landscape, .gallery-item.full { aspect-ratio: 4/3; }
+    
     footer { display: block; padding: 2rem; }
     .ft-left { border: none; padding: 0 0 1rem 0; }
     .ft-right { padding: 0; justify-content: flex-start; gap: 1rem; flex-wrap: wrap; }
@@ -160,7 +166,7 @@
 <nav>
   <div class="nav-rule"></div>
   <div class="nav-logo-cell">
-    <a href="index.html" class="nav-logo">kodeoffun</em></a>
+    <a href="index.html" class="nav-logo">kodeoffun</a>
   </div>
   <div class="nav-links-cell">
     <ul class="nav-links">
@@ -174,22 +180,20 @@
   <div class="sw-rule-l"></div>
   <div class="sw-inner">
     <div class="project-header rv">
-      <span class="ph-meta">Project No. 002</span>
-      <h1 class="ph-title">Porsche Markham <em>2026</em></h1>
+      <h1 class="ph-title">Queen's Park<em> 2025</em></h1>
       <p style="font-size: 0.68rem; line-height: 1.9; color: var(--steel); max-width: 500px;">
-textxttxgsdhj
+        
       </p>
 
       <div class="ph-details-grid">
         <div class="ph-detail-cell">
           <span class="phd-label">Location</span>
-          <span class="phd-val">Toronto, ON</span>
+          <span class="phd-val">Downtown Toronto, ON</span>
         </div>
         <div class="ph-detail-cell">
           <span class="phd-label">Year</span>
-          <span class="phd-val">2026</span>
+          <span class="phd-val">2025</span>
         </div>
-
       </div>
     </div>
   </div>
@@ -201,21 +205,25 @@ textxttxgsdhj
   <div class="sw-inner">
     <div class="gallery-grid">
 
-      <div class="gallery-item full rv">
-        <div class="arch-line-v"></div> <img src="assets/photo.JPG" alt="Photo of the stage during the closing ceremonies." class="g-photo">
-        <div class="g-caption">word</div>
-      </div>
-
-      <div class="gallery-item landscape rv">
-        <img src="assets/pic.JPG" alt="stuff" class="g-photo">
-        <div class="g-caption">pedfgfrfg</div>
-      </div>
       <div class="gallery-item portrait rv">
-        <div class="arch-line-h"></div> <img src="assets/pic.JPG" alt=" Mtext" class="g-photo">
-        <div class="g-caption">Guest Speaker</div>
+        <div class="arch-line-h"></div> 
+        <img src="assets/IMG_7316.JPG" alt="" class="g-photo uncropped">
+        <div class="g-caption">Lineup</div>
       </div>
-
-
+      
+      <div class="gallery-item portrait rv">
+        <div class="arch-line-h"></div> 
+        <img src="assets/IMG_7484.JPG" alt="" class="g-photo uncropped">
+        <div class="g-caption">McLaren Sunset</div>
+      </div>
+      
+      <div class="gallery-item portrait rv">
+        <div class="arch-line-h"></div> 
+        <img src="assets/IMG_7524.JPG" alt="" class="g-photo uncropped">
+        <div class="g-caption"></div>
+      </div>
+          
+     
     </div>
   </div>
   <div class="sw-rule-r"></div>
