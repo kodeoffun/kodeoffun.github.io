@@ -100,11 +100,11 @@
   /* Full width image */
   .gallery-item.full { grid-column: 1 / -1; border-right: none; aspect-ratio: 21/9; }
   /* Portrait style image */
-  .gallery-item.portrait { aspect-ratio: 3/4; }
+  .gallery-item.portrait { aspect-ratio: 2/3; }
   /* Landscape style image */
   .gallery-item.landscape { aspect-ratio: 4/3; }
 
-  .g-photo { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); display: block; }
+  .g-photo { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); display: block; }
   .gallery-item:hover .g-photo { transform: scale(1.03); }
 
   .g-caption {
@@ -145,7 +145,8 @@
     .ph-detail-cell:nth-child(2n) { border-right: none; }
     .gallery-grid { grid-template-columns: 1fr; }
     .gallery-item { border-right: none; }
-    .gallery-item.portrait, .gallery-item.landscape, .gallery-item.full { aspect-ratio: 4/3; }
+    .gallery-item.landscape, .gallery-item.full { aspect-ratio: 4/3; }
+    .gallery-item.portrait { aspect-ratio: 2/3; }
     footer { display: block; padding: 2rem; }
     .ft-left { border: none; padding: 0 0 1rem 0; }
     .ft-right { padding: 0; justify-content: flex-start; gap: 1rem; flex-wrap: wrap; }
@@ -160,7 +161,7 @@
 <nav>
   <div class="nav-rule"></div>
   <div class="nav-logo-cell">
-    <a href="index.html" class="nav-logo">kodeoffun</em></a>
+    <a href="index.html" class="nav-logo">kodeoffun</a>
   </div>
   <div class="nav-links-cell">
     <ul class="nav-links">
@@ -177,7 +178,7 @@
       <span class="ph-meta">Project No. 001</span>
       <h1 class="ph-title">Queen's Park <em></em></h1>
       <p style="font-size: 0.68rem; line-height: 1.9; color: var(--steel); max-width: 500px;">
-       
+        
       </p>
 
       <div class="ph-details-grid">
@@ -190,7 +191,7 @@
           <span class="phd-val">2025</span>
         </div>
 
-     
+      
       </div>
     </div>
   </div>
